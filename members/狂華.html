@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>狂華</title>
+    <title>狂華 (Kyouka)</title>
     <style>
         * {
             margin: 0;
@@ -14,48 +14,44 @@
             background-color: #000;
             color: white;
             font-family: 'Arial', sans-serif;
+            padding: 2rem;
         }
-        .container {
-            display: flex;
-            gap: 2rem;
-            padding: 3rem;
-        }
-        .album-img {
-            width: 200px;
-            height: 200px;
-            background: url('https://your-domain.com/album-cover.jpg') no-repeat center/cover;
-            border-radius: 8px;
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
         .text-group {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
+            margin-bottom: 3rem;
         }
         .text-group h1 {
             writing-mode: vertical-rl;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
             line-height: 1;
         }
         .text-group small {
-            font-size: 1rem;
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
             color: white;
         }
         .text-group span {
             color: #ff0000;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
             margin-top: 1.5rem;
         }
         .album-section {
             display: flex;
-            gap: 1.5rem;
+            gap: 3rem;
             align-items: center;
-            margin-top: 3rem;
+            width: 100%;
         }
         .album-section img {
-            width: 180px;
-            height: 180px;
+            width: clamp(180px, 20vw, 220px);
+            height: auto;
             object-fit: cover;
         }
         .album-text {
@@ -64,64 +60,56 @@
             gap: 0.3rem;
         }
         .album-text h3 {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem);
             color: #ffcc00;
         }
         .album-text p {
-            font-size: 0.9rem;
+            font-size: clamp(0.7rem, 1vw, 0.9rem);
             color: #cccccc;
         }
-</style>
+        @media (max-width: 768px) {
+            .text-group {
+                gap: 0.3rem;
+            }
+            .text-group h1 {
+                font-size: 1.8rem;
+            }
+            .text-group small {
+                font-size: 0.8rem;
+            }
+            .text-group span {
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+            .album-section {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .album-section img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+            .album-text {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="album-img"></div>
+    <div class="main-container">
         <div class="text-group">
             <h1>狂華</h1>
             <small>Vocal</small>
             <span>Aliene Ma'riage</span>
         </div>
-    </div>
-    <!-- 頭像（headshot） -->
-<img 
-  src="../assets/images/kyouka.jpg" 
-  alt="Les Soirée"
-  style="max-width: 380px; 
-           box-shadow: none; 
-           border-radius: 8px; 
-           flex-shrink: 0;">
-    
-<div style="display: flex; flex-direction: column; gap: 40px; align-items: center; max-width: 420px; margin: 60px auto 40px auto;">
-    
-    <!-- Les Soirée 夜の舞踏会~ル・ソワレ~完結篇 -->
-<div class="album">
-        <img 
-    src="../assets/images/kyouka.jpg" 
-    alt="cover" 
-    style="max-width: 380px; box-shadow: none; border-radius: 8px;">
-</div>
-            <!-- 右側文字（你可以放專輯資訊） -->
-<div style="color: #ddd; padding-top: 20px;">
-    <h2 style="color: #a0d8ff;">Les Soirée 夜の舞踏会～ル・ソワレ～完結篇</h2>
-    <p style="font-size: 1.1em;">古の愛物語～エンドレス</p>
-    <p>作詞 / 狂華　作曲 / RAY, MAST</p>
-    <p>譯者：Zanka</p>
-  </div>
-</div>
-
-    <!-- 第二張專輯（繼續複製上面區塊即可新增） -->
-    <div class="album">
-        < img src="../assets/images/album-another.jpg" alt="專輯封面">
-        <div class="album-info">
-            <div class="album-name">另一張專輯名稱</div>
-            
-            <div class="song">
-                <a href="/你的文章檔名.html">歌名1</a >
-                <div class="credits">作詞／作曲：狂華 / XXX 譯者：你的名字</div>
+        <div class="album-section">
+            <img src="https://your-domain.com/album-cover1.jpg" alt="专辑封面1">
+            <div class="album-text">
+                <h3>Les Soirée</h3>
+                <p>夜の舞踏会～ル・ソワレ～完結篇</p>
             </div>
-            
         </div>
     </div>
-
 </body>
 </html>
