@@ -16,13 +16,13 @@ collections:
     fields:
       - {label: "標題", name: "title", widget: "string"}
       - {label: "日期", name: "date", widget: "datetime", default: "{{now}}"}
-      - {label: "封面圖", name: "image", widget: "image"}
+      - {label: "寫真", name: "image", widget: "image"}
       - {label: "內文", name: "body", widget: "markdown"}
   
   - name: "gallery"
-    label: "圖片庫"
+    label: "寫真掃描"
     folder: "gallery"
     create: true
     fields:
-      - {label: "圖片", name: "image", widget: "image"}
+      - {label: "寫真", name: "image", widget: "image"}
       - {label: "描述", name: "description", widget: "string"}
