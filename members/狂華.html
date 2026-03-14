@@ -1,25 +1,87 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>狂華</title>
-   <div style="display: flex; align-items: flex-start; gap: 40px; max-width: 900px; margin: 40px auto; padding: 0 20px;">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            display: flex;
+            gap: 2rem;
+            padding: 3rem;
+        }
+        .album-img {
+            width: 200px;
+            height: 200px;
+            background: url('https://your-domain.com/album-cover.jpg') no-repeat center/cover;
+            border-radius: 8px;
+        }
+        .text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .text-group h1 {
+            writing-mode: vertical-rl;
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .text-group small {
+            font-size: 1rem;
+            color: white;
+        }
+        .text-group span {
+            color: #ff0000;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .album-section {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        .album-section img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+        .album-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .album-text h3 {
+            font-size: 1.1rem;
+            color: #ffcc00;
+        }
+        .album-text p {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+</style>
 </head>
 <body>
-<style>
-  body, html {
-    background-color: #000000 !important;
-    color: #ddd;
-    margin: 0;
-    padding: 0;
-  }
-</style>
-    <h1>狂華</h1>
-    <p class="subtitle">Vocal</p >
-<a href="../bands/alienemarriage.html">
-    <p class="subtitle">Aliene Ma'riage</p >
-</a>
+    <div class="container">
+        <div class="album-img"></div>
+        <div class="text-group">
+            <h1>狂華</h1>
+            <small>Vocal</small>
+            <span>Aliene Ma'riage</span>
+        </div>
+    </div>
     <!-- 頭像（headshot） -->
 <img 
   src="../assets/images/kyouka.jpg" 
