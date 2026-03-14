@@ -133,27 +133,21 @@ Words / Kyouka　Music / RAY , MAST
   
 
 **何も残す事は無い　あの空に消えて行く**
-
 なにものこすことはない　あのそらにきえていく
-
 什么也没有留下　渐渐消失在那片天空
 
-  
+**
 
-**夢を現実に変えたから・・・**
-
+## 夢を現実に変えたから・・・
 ゆめをげんじつにかえたから・・・
-
 因为梦境变成了现实・・・
 
-  
-
-妖精のように飛んで行くから・・・
+**妖精のように飛んで行くから・・・**
 ようせいのようにきえていくから・・・
 因为像精灵一样飞去・・・
 ![25007-les-soiree-yoru-no-budokai-danzai-no-shou-shinbatsuhen-cover.jpeg](blob:https://stackedit.io/57992bc9-ea7c-41b9-8f3f-cff3c93ab8b3)
 
 ![104481-les-soiree-yoru-no-budokai-danzai-no-shou-shinbatsuhen-photo.jpeg](blob:https://stackedit.io/a0f97cd6-1d07-4355-8371-9203762a9227)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTgxMDAwNjZdfQ==
+eyJoaXN0b3J5IjpbMTEzNjI4NjM0Ml19
 -->
