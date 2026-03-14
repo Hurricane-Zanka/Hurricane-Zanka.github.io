@@ -1,12 +1,14 @@
-**《古の愛物語～** エンドレス》Aliene Ma'riage
+**《古の愛物語～エンドレス》**
+《いにしえのあいものがたり～ ENDLESS》
+《古之爱物语～ 无尽》
 
-《いにしえのあいものがたり～ ENDLESS》Aliene Ma'riage
+**Aliene Ma'riage**
 
-《古之爱物语～ 无尽》Aliene Ma'riage
+
 
   
 
-****作詞** / 狂華　作曲 / RAY , MAST**
+**作詞** / 狂華　作曲 / RAY , MAST
 Words / Kyouka　Music / RAY , MAST
 
   
@@ -129,5 +131,5 @@ Words / Kyouka　Music / RAY , MAST
 
 ![104481-les-soiree-yoru-no-budokai-danzai-no-shou-shinbatsuhen-photo.jpeg](blob:https://stackedit.io/a0f97cd6-1d07-4355-8371-9203762a9227)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTcyNzMxOF19
+eyJoaXN0b3J5IjpbLTYyNjQ0OTIyNF19
 -->
