@@ -9,66 +9,90 @@ title: ENDLESS SIGNAL
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENDLESS SIGNAL</title>
     <style>
-        :root { --base-font: 1.1rem; }
-        body { font-family: "Helvetica Neue", Arial, sans-serif; background: #111; color: #ddd; margin: 0; padding: 20px; line-height: 1.6; font-size: var(--base-font); }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #1a1a1a; position: sticky; top: 0; z-index: 100; }
-        .home-btn { color: #00ffff; font-size: 1.3em; text-decoration: none; }
-        h1 { color: #ffcc00; font-size: 2.8em; }
-        .controls { margin: 20px 0; text-align: center; }
-        .controls button { background: #333; color: #ffcc00; padding: 8px 16px; margin: 5px; border-radius: 6px; }
-        .section { max-width: 1100px; margin: 60px auto; }
-        .section h2 { color: #ff8800; border-bottom: 3px solid #ff8800; padding-bottom: 10px; }
-        .band-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
-        .band-card { background: #222; border-radius: 12px; overflow: hidden; text-align: center; transition: 0.3s; }
-        .band-card:hover { transform: scale(1.05); }
+        body { 
+            font-family: "Helvetica Neue", Arial, sans-serif; 
+            background: #111 url('assets/images/background.jpg') center/cover no-repeat fixed; 
+            color: #ddd; margin: 0; padding: 0; line-height: 1.6; 
+        }
+        header { 
+            background: rgba(0,0,0,0.85); padding: 15px 30px; display: flex; 
+            justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; 
+        }
+        .home-btn { color: #00ffff; font-size: 1.4em; text-decoration: none; }
+        .tabs { display: flex; gap: 30px; }
+        .tab { color: #ffcc00; font-size: 1.2em; cursor: pointer; padding: 8px 0; border-bottom: 3px solid transparent; }
+        .tab.active { border-bottom: 3px solid #ff8800; }
+        .content { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: none; }
+        .content.active { display: block; }
+        .band-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; }
+        .band-card { background: rgba(34,34,34,0.95); border-radius: 12px; overflow: hidden; text-align: center; transition: 0.3s; }
+        .band-card:hover { transform: scale(1.06); }
         .band-card img { width: 100%; height: 180px; object-fit: cover; }
-        .band-card h3 { margin: 15px 0 5px; color: #ffcc00; }
-        footer { text-align: center; color: #666; margin-top: 80px; }
+        .band-card h3 { margin: 12px 0; color: #ffcc00; }
+        footer { text-align: center; color: #666; padding: 40px; }
     </style>
 </head>
 <body>
     <header>
         <h1>ENDLESS SIGNAL</h1>
-        <a href="#" class="home-btn" onclick="window.scrollTo(0,0)">HOME</a>
+        <a href="#" class="home-btn" onclick="showTab(0)">HOME</a>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">Artists</div>
+            <div class="tab" onclick="showTab(1)">文章</div>
+            <div class="tab" onclick="showTab(2)">写真館</div>
+            <div class="tab" onclick="showTab(3)">更新履歷</div>
+            <div class="tab" onclick="showTab(4)">關於</div>
+        </div>
     </header>
 
-    <div class="controls">
-        <button onclick="setFont(0.9)">小字</button>
-        <button onclick="setFont(1.1)">中字</button>
-        <button onclick="setFont(1.3)">大字</button>
+    <!-- Artists -->
+    <div id="tab0" class="content active">
+        <h2 style="text-align:center; color:#ff8800;">樂隊列表（A-Z 排序）</h2>
+        <div class="band-grid" id="band-grid"></div>
     </div>
 
-    <div id="bands" class="section">
-        <h2>樂隊列表（A-Z 自動排序）</h2>
-        <div class="band-list" id="band-grid"></div>
-    </div>
-
-    <div class="section">
-        <h2>更新履歷</h2>
-        <ul>
-            <li>2026-03-14 新增 Aliene Ma'riage《古の愛物語～ エンドレス》歌詞與翻譯</li>
-            <li>2026-03-14 上傳 1 張新写真</li>
-            <!-- 你之後用 StackEdit 直接在這裡新增即可 -->
+    <!-- 文章 -->
+    <div id="tab1" class="content">
+        <h2>目錄</h2>
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a></li>
+            {% endfor %}
         </ul>
     </div>
 
-    <div class="section">
+    <!-- 写真館 -->
+    <div id="tab2" class="content">
         <h2>写真館（A-Z 排序）</h2>
-        <div class="band-list" id="photo-grid"></div>
+        <div class="band-grid" id="photo-grid"></div>
     </div>
 
-    <footer>© 2026 Hurricane-Zanka | Powered by GitHub Pages</footer>
+    <!-- 更新履歷 -->
+    <div id="tab3" class="content">
+        <h2>更新履歷</h2>
+        <ul>
+            <li>2026-03-14 新增 Aliene Ma'riage 完整歌詞與翻譯</li>
+            <li>2026-03-14 完成 A-Z 樂隊列表與写真館</li>
+            <!-- 以後用 StackEdit 在這裡新增即可 -->
+        </ul>
+    </div>
+
+    <!-- 關於 -->
+    <div id="tab4" class="content">
+        <h2>關於本站</h2>
+        <p>這裡是我的個人樂隊檔案站，所有內容均可自由查看。</p>
+    </div>
+
+    <footer>© 2026 Hurricane-Zanka | Powered by GitHub Pages + StackEdit</footer>
 
     <script>
-        // === 這裡新增樂隊（自動 A-Z 排序 + 肖像）===
+        // === 樂隊資料（新增時只需在這裡加一行，自動 A-Z 排序）===
         const bands = [
             { name: "Aliene Ma'riage", portrait: "assets/images/alienemarriage.jpg", url: "bands/alienemarriage.html" },
-            { name: "狂華", portrait: "assets/images/kyouka.jpg", url: "bands/kyouka.html" },
-            // 繼續新增 ↓（格式完全一樣）
+            // 繼續加 ↓ 
             // { name: "另一樂團", portrait: "assets/images/xxx.jpg", url: "bands/xxx.html" },
         ];
 
-        // 自動 A-Z 排序並顯示
         function renderBands() {
             bands.sort((a, b) => a.name.localeCompare(b.name, 'zh-TW'));
             const html = bands.map(b => `
@@ -80,12 +104,15 @@ title: ENDLESS SIGNAL
                 </div>
             `).join('');
             document.getElementById('band-grid').innerHTML = html;
-            document.getElementById('photo-grid').innerHTML = html;  // 写真館同步顯示
+            document.getElementById('photo-grid').innerHTML = html;
         }
         renderBands();
 
-        function setFont(size) {
-            document.documentElement.style.setProperty('--base-font', size + 'rem');
+        function showTab(n) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('tab' + n).classList.add('active');
+            document.querySelectorAll('.tab')[n].classList.add('active');
         }
     </script>
 </body>
