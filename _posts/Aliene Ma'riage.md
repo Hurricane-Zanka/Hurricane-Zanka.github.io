@@ -131,6 +131,8 @@ Words / Kyouka　Music / RAY , MAST
 
 ![104481-les-soiree-yoru-no-budokai-danzai-no-shou-shinbatsuhen-photo.jpeg](blob:https://stackedit.io/a0f97cd6-1d07-4355-8371-9203762a9227)
 翻譯·平假名 / Zanka
+
+圖源 vk.gy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTEwMDQ3Nl19
+eyJoaXN0b3J5IjpbLTE5NjQ3NzQ5NDldfQ==
 -->
