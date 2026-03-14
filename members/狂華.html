@@ -1,28 +1,89 @@
-<h1>狂華</h1>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狂華</title>
+    <style>
+        body { 
+            font-family: "Helvetica Neue", Arial, sans-serif; 
+            background: #000; 
+            color: #ddd; 
+            margin: 0; 
+            padding: 30px; 
+            line-height: 1.6; 
+        }
+        h1 { color: #ffcc00; text-align: center; font-size: 2.5em; }
+        .headshot { 
+            width: 280px; 
+            height: 280px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            box-shadow: 0 0 20px rgba(255,136,0,0.6); 
+            display: block; 
+            margin: 0 auto 30px; 
+        }
+        .album { 
+            background: #111; 
+            padding: 20px; 
+            border-radius: 12px; 
+            margin-bottom: 40px; 
+            display: flex; 
+            gap: 30px; 
+            align-items: center; 
+        }
+        .album img { 
+            width: 280px; 
+            height: 280px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        .album-info { flex: 1; }
+        .album-name { color: #ffcc00; font-size: 1.5em; margin-bottom: 15px; }
+        .song { margin: 18px 0; }
+        .song a { 
+            color: #ddd; 
+            text-decoration: none; 
+            font-size: 1.1em; 
+        }
+        .song a:hover { color: #ff8800; }
+        .credits { color: #888; font-size: 0.95em; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>狂華</h1>
+    < img src="../assets/images/kyouka.jpg" class="headshot" alt="狂華">
 
-< img src="../assets/images/kyouka.jpg" width="280" style="border-radius:12px; box-shadow:0 0 20px rgba(255,136,0,0.6);">
-
-<p style="margin:20px 0 30px; font-size:1.1em;">主唱</p >
-
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px;">
-
-    <!--Les Soirée 夜の舞踏会~ル・ソワレ~完結篇-->
-    <div style="background:#222; padding:15px; border-radius:12px; text-align:center;">
-        < img src="../assets/images/les.jpg" width="280" style="border-radius:12px;">
-        <h3 style="color:#ffcc00; margin:15px 0 10px;">《古之愛物語～エンドレス》</h3>
-        <ul style="list-style:none; padding:0;">
-            <li><a href=" " style="color:#ddd; text-decoration:none;">古之愛物語～エンドレス</a ></li>
-            <li><a href="/2026-03-15-無尽.html" style="color:#ddd; text-decoration:none;">古之愛物語～无尽</a ></li>
-        </ul>
+    <!-- Les Soirée 夜の舞踏会~ル・ソワレ~完結篇 -->
+    <div class="album">
+        < img src="../assets/images/album-endless.jpg" alt="專輯封面">
+        <div class="album-info">
+            <div class="album-name">《古の愛物語～エンドレス》</div>
+            
+            <div class="song">
+                <a href=" ">古の愛物語～エンドレス</a >
+                <div class="credits">作詞/狂華　作曲：RAY, MAST　譯者：Zanka</div>
+            </div>
+            
+            <div class="song">
+                <a href="/2026-03-15-無尽.html">古之愛物語～无尽</a >
+                <div class="credits">作詞／作曲：狂華 / RAY, MAST 譯者：你的名字</div>
+            </div>
+        </div>
     </div>
 
-    <!-- 專輯 2（繼續複製上面區塊新增） -->
-    <div style="background:#222; padding:15px; border-radius:12px; text-align:center;">
-        < img src="../assets/images/album-another.jpg" width="280" style="border-radius:12px;">
-        <h3 style="color:#ffcc00; margin:15px 0 10px;">另一張專輯名稱</h3>
-        <ul style="list-style:none; padding:0;">
-            <li><a href="/你的文章檔名.html" style="color:#ddd; text-decoration:none;">歌名1</a ></li>
-        </ul>
+    <!-- 第二張專輯（繼續複製上面區塊即可新增更多專輯） -->
+    <div class="album">
+        < img src="../assets/images/album-another.jpg" alt="專輯封面">
+        <div class="album-info">
+            <div class="album-name">另一張專輯名稱</div>
+            
+            <div class="song">
+                <a href="/你的文章檔名.html">歌名1</a >
+                <div class="credits">作詞／作曲：狂華 / XXX 譯者：你的名字</div>
+            </div>
+        </div>
     </div>
 
-</div>
+</body>
+</html>
