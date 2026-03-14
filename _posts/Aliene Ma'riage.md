@@ -8,7 +8,7 @@
 
   
 
-**作詞** / 狂華　作曲 / RAY , MAST
+**作詞 / 狂華　作曲 / RAY , MAST**
 Words / Kyouka　Music / RAY , MAST
 
   
@@ -130,6 +130,7 @@ Words / Kyouka　Music / RAY , MAST
 ![25007-les-soiree-yoru-no-budokai-danzai-no-shou-shinbatsuhen-cover.jpeg](blob:https://stackedit.io/57992bc9-ea7c-41b9-8f3f-cff3c93ab8b3)
 
 ![104481-les-soiree-yoru-no-budokai-danzai-no-shou-shinbatsuhen-photo.jpeg](blob:https://stackedit.io/a0f97cd6-1d07-4355-8371-9203762a9227)
+翻譯·平假名 / Zanka
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNjQ0OTIyNF19
+eyJoaXN0b3J5IjpbLTcwNTEwMDQ3Nl19
 -->
