@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane-Zanka 檔案站</title>
+    <style>
+        body { font-family: "Helvetica Neue", Arial, sans-serif; background: #111; color: #ddd; margin: 0; padding: 20px; line-height: 1.6; }
+        h1 { text-align: center; color: #ffcc00; font-size: 2.8em; margin: 40px 0 10px; }
+        .subtitle { text-align: center; color: #888; font-size: 1.1em; }
+        nav { text-align: center; margin: 30px 0 50px; font-size: 1.2em; }
+        nav a { color: #00ffff; margin: 0 25px; text-decoration: none; }
+        nav a:hover { color: #ff8800; }
+        .section { max-width: 900px; margin: 60px auto; }
+        .section h2 { color: #ff8800; border-bottom: 3px solid #ff8800; padding-bottom: 10px; }
+        .post-list { list-style: none; padding: 0; }
+        .post-list li { margin: 15px 0; font-size: 1.1em; }
+        .post-list a { color: #ddd; text-decoration: none; }
+        .post-list a:hover { color: #ffcc00; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .gallery img { width: 100%; border-radius: 8px; transition: 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
+        footer { text-align: center; color: #666; margin-top: 80px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Hurricane-Zanka</h1>
+    <p class="subtitle">個人文章與圖片檔案站</p>
+    
+    <nav>
+        <a href="#catalog">目録</a> |
+        <a href="#updates">更新履歷</a> |
+        <a href="#posts">文章</a> |
+        <a href="#gallery">圖片庫</a> |
+        <a href="#about">關於</a>
+    </nav>
+
+    <div id="catalog" class="section">
+        <h2>目録</h2>
+        <ul class="post-list">
+            <li><a href="#_posts/2026-03-01-第一篇文章.md">2026-03-01 第一篇文章</a></li>
+            <!-- Decap CMS 會自動幫你產生新文章連結 -->
+        </ul>
+    </div>
+
+    <div id="updates" class="section">
+        <h2>更新履歷</h2>
+        <p>最終更新：2026 年 3 月 14 日<br>新增文章 2 篇、圖片 5 張</p>
+    </div>
+
+    <div id="posts" class="section">
+        <h2>文章</h2>
+        <!-- 這裡會顯示你用後台新增的文章 -->
+        <ul class="post-list" id="post-list">
+            <!-- 之後用 Jekyll 或手動更新也可 -->
+        </ul>
+    </div>
+
+    <div id="gallery" class="section">
+        <h2>圖片庫</h2>
+        <div class="gallery">
+            <!-- 你用後台上傳的圖片會出現在這裡（之後可改成自動） -->
+            <img src="assets/images/你的第一張.jpg" alt="圖片1">
+            <!-- 多加幾張 -->
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <h2>關於本站</h2>
+        <p>這是我的個人文章與圖片分享站，<br>所有內容均可自由查看與使用。</p>
+    </div>
+
+    <footer>
+        © 2026 Hurricane-Zanka | Powered by GitHub Pages + Decap CMS
+    </footer>
+</body>
+</html>
