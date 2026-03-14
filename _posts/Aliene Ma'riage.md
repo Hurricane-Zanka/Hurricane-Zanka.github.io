@@ -1,3 +1,9 @@
+```markdown
+---
+title: Aliene Ma'riage
+date: 2026-03-14 18:00:00
+---
+```
 **《古の愛物語～エンドレス》**
 《いにしえのあいものがたり～ ENDLESS》
 《古之爱物语～ 无尽》
@@ -134,5 +140,5 @@ Words / Kyouka　Music / RAY , MAST
 
 圖源 vk.gy
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjQ3NzQ5NDldfQ==
+eyJoaXN0b3J5IjpbLTQ3MjI3NzgxMiwtMTk2NDc3NDk0OV19
 -->
