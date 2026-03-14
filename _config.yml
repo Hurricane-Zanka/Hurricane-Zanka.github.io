@@ -1,0 +1,10 @@
+title: ENDLESS SIGNAL
+description: V系資源分享與中文翻譯
+baseurl: ""
+url: "https://Hurricane-Zanka.github.io"
+
+# 文章設定
+permalink: /:year/:month/:day/:title/
+
+# 時間格式（中文）
+timezone: Asia/Shanghai
