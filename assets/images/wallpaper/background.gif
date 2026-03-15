@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENDLESS SIGNAL</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // 設置畫布為視窗大小 (適合任何電腦螢幕)
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // 粒子陣列
+        let particles = [];
+
+        // 粒子數量 (少量: 總數約 60-80 個)
+        const PARTICLE_COUNT = 70;
+
+        // 初始化粒子
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,      // X 位置
+                y: Math.random() * canvas.height,     // Y 位置
+                radius: Math.random() * 4 + 2,        // 半徑 2~6px
+                speedY: Math.random() * 1 + 0.8,      // 下落速度
+                speedX: Math.random() * 0.5 - 0.25,   // 左右飄移 (-0.25 ~ 0.25)
+                opacity: Math.random() * 0.7 + 0.3,   // 透明度 0.3~1.0
+                // 類型: 'snow' (雪) 或 'sakura' (櫻花)
+                type: Math.random() > 0.6 ? 'sakura' : 'snow' // 60% 雪, 40% 櫻花 (少量櫻花)
+            });
+        }
+
+        // 繪製櫻花花瓣 (簡化版: 五瓣小花)
+        function drawSakura(ctx, x, y, size, opacity) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.beginPath();
+            
+            // 設定為粉紅色系，帶有透明度
+            ctx.fillStyle = `rgba(255, 200, 220, ${opacity})`; // 淺粉紅
+            
+            // 簡易花瓣: 畫五個小圓圈代表花瓣
+            for (let i = 0; i < 5; i++) {
+                const angle = (i / 5) * Math.PI * 2;
+                const petalX = Math.cos(angle) * size * 0.6;
+                const petalY = Math.sin(angle) * size * 0.6;
+                ctx.beginPath();
+                ctx.arc(petalX, petalY, size * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // 中心點加一點深色
+            ctx.fillStyle = `rgba(255, 150, 180, ${opacity})`;
+            ctx.beginPath();
+            ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.restore();
+        }
+
+        // 繪製雪 (小白點)
+        function drawSnow(ctx, x, y, radius, opacity) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius * 0.8, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+            ctx.fill();
+            
+            // 加一點亮點讓雪看起來晶瑩
+            ctx.beginPath();
+            ctx.arc(x - radius*0.2, y - radius*0.2, radius*0.3, 0, Math.PI*2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${opacity + 0.2})`;
+            ctx.fill();
+        }
+
+        // 動畫循環
+        function animate() {
+            // 黑色背景 (完全透明清空就是黑色，因為CSS背景是黑色)
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // 更新和繪製每個粒子
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                
+                // 移動
+                p.y += p.speedY;
+                p.x += p.speedX;
+                
+                // 邊界重置 (當粒子落到畫面外，從頂部重新出現)
+                if (p.y > canvas.height + 10) {
+                    p.y = -10;
+                    p.x = Math.random() * canvas.width;
+                }
+                if (p.x > canvas.width + 10) {
+                    p.x = -10;
+                } else if (p.x < -10) {
+                    p.x = canvas.width + 10;
+                }
+                
+                // 根據類型繪製
+                if (p.type === 'sakura') {
+                    drawSakura(ctx, p.x, p.y, p.radius, p.opacity);
+                } else {
+                    drawSnow(ctx, p.x, p.y, p.radius, p.opacity);
+                }
+            }
+            
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    </script>
+</body>
+</html>
