@@ -7,16 +7,15 @@
     <style>
         body { 
             font-family: "Helvetica Neue", Arial, sans-serif; 
-            background: #111 url('assets/images/background.jpg') center/cover no-repeat fixed; 
+            background: #111 url('assets/images/background/background.jpg') center/cover no-repeat fixed; 
             color: #ddd; margin: 0; padding: 0; line-height: 1.6; 
         }
         header { 
             background: rgba(0,0,0,0.85); padding: 15px 30px; display: flex; 
             justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; 
         }
-        .home-btn { color: #00ffff; font-size: 1.4em; text-decoration: none; }
         .tabs { display: flex; gap: 30px; }
-        .tab { color: #ffcc00; font-size: 1.2em; cursor: pointer; padding: 8px 0; border-bottom: 3px solid transparent; }
+        .tab { color: #90CAF9; font-size: 1.2em; cursor: pointer; padding: 8px 0; border-bottom: 3px solid transparent; }
         .tab.active { border-bottom: 3px solid #ff8800; }
         .content { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: none; }
         .content.active { display: block; }
@@ -24,14 +23,13 @@
         .band-card { background: rgba(34,34,34,0.95); border-radius: 12px; overflow: hidden; text-align: center; transition: 0.3s; }
         .band-card:hover { transform: scale(1.06); }
         .band-card img { width: 100%; height: 180px; object-fit: cover; }
-        .band-card h3 { margin: 12px 0; color: #ffcc00; }
+        .band-card h3 { margin: 12px 0; color: #90CAF9; }
         footer { text-align: center; color: #666; padding: 40px; }
     </style>
 </head>
 <body>
     <header>
         <h1>ENDLESS SIGNAL</h1>
-        <a href="#" class="home-btn" onclick="showTab(0)">HOME</a>
         <div class="tabs">
             <div class="tab active" onclick="showTab(0)">Artists</div>
             <div class="tab" onclick="showTab(1)">文章</div>
@@ -86,7 +84,7 @@
     <script>
         // === 樂隊資料（新增時只需在這裡加一行，自動 A-Z 排序）===
         const bands = [
-            { name: "Aliene Ma'riage", portrait: "assets/images/alienemarriage.jpg", url: "bands/alienemarriage.html" },
+            { name: "Aliene Ma'riage", portrait: "assets/images/alienemarriage.jpg", url: "bands/alienemarriage.html",underline:"none" },
             { name: "Chateau La Tour",portrait: "assets/images/chateaulatour.jpg", url: "bands/chateaulatour.html" },
             { name: "bis",portrait: "assets/images/bis.jpg.1", url: "bands/bis.html" },
             // 繼續加 ↓ 
